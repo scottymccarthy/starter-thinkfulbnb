@@ -35,6 +35,35 @@
       <section id="stay">
         <h2>Find the perfect vacation rental</h2>
         <!-- Create a form here -->
+        <form>
+          <div>
+          <label for="location">Location</label>
+          <input
+          id="location"
+          type="text"
+          placeholder="Search destination"
+          required/>
+          </div>
+          <div>
+            <label for="arive">Arrive</label>
+            <input 
+            id="arrive"
+            type="date"
+            name="arrive"
+            min="1/11/2023"/>
+          </div>
+          <div>
+            <label for="depart">Depart</label>
+            <input
+            id="depart"
+            type="date"
+            name="depart"
+            min="1/11/2023"/>
+          </div>
+          <div>
+            <button type="submit">Search</button>
+          </div>
+        </form>
       </section>
 
       <!-- About -->
@@ -80,6 +109,7 @@
 
       <!-- Host -->
       <section id="host" class="alternate-background">
+        <div class="host-group">
         <h2>Want to Become a Thinkfulbnb Host?</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
@@ -98,7 +128,7 @@
             hendrerit mauris.
           </li>
         </ul>
-
+      </div>
         <img src="images/become-a-host.png" alt="Thinkfulbnb - Become a host" />
       </section>
     </main>
