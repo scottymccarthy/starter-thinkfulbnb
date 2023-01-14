@@ -3,7 +3,6 @@
 body {
   font-family: "Lato", sans-serif;
 }
-
 .paragraph{
   align-items: center
   margin: auto 0
@@ -36,7 +35,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width:100%
 }
 
 /* ---  Groups & Items --- */
@@ -65,7 +64,7 @@ main img {
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 10 20px;
+  padding: 20px 20px 0 20px;
   text-align: center;
 }
 
@@ -109,6 +108,7 @@ form {
 form label {
   font-weight: bold;
 }
+
 form div {
   display: flex;
   justify-content: space-between;
@@ -126,6 +126,7 @@ form button {
   color: #fff;
   font-size: 24px;
   padding: 15px;
+  ;
 }
 
 /* -------  Footer ------- */
@@ -139,14 +140,14 @@ footer p {
   text-align: center;
   padding: 20px;
 }
-
 .grid {
+  
   display: flex;
   flex-wrap:wrap;
   flex-direction: column;
 }
-
 /* -------  Media Query ------- */
+
 @media (min-width: 480px) {
   header {
     display: flex;
