@@ -4,6 +4,11 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+.paragraph{
+  align-items: center
+  margin: auto 0
+}
+
 h2 {
   font-size: 26px;
   font-weight: 400;
@@ -30,7 +35,7 @@ section.alternate-background {
   color: #fff;
 }
 
-img {
+main img {
   width: 100px;
 }
 
@@ -38,7 +43,7 @@ img {
 
 .group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .item {
@@ -48,6 +53,12 @@ img {
 
 .item-double {
   flex: 2;
+}
+
+.container {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column
 }
 
 /* -------  Navigation ------- */
@@ -60,16 +71,17 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 42px;
+  font-size: 50px;
   color: #fff;
 }
 
-header nav ul {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px 0;
+header nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
 }
 
 header nav ul li {
@@ -79,6 +91,7 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
+  padding: 0 20px 0 0;
 }
 
 header nav ul li a:hover {
@@ -89,23 +102,21 @@ header nav ul li a:hover {
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
-  padding: 20px;
-}
-
-form div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;;
+  padding: 10px;
+  flex-direction: column
 }
 
 form label {
   font-weight: bold;
 }
+form div {
+  display: flex;
+  justify-content: space-between;
+}
 
 form select,
 form input {
-  font-weight: bold;
+  margin-bottom: 20px;
   width: 180px;
 }
 
@@ -115,22 +126,6 @@ form button {
   color: #fff;
   font-size: 24px;
   padding: 15px;
-  width: 100%;
-}
-
-form .select {
-  display: inline-block;
-  font-weight: bold;
-}
-
-/* ------- About ------- */
-#about img {
-  padding: 20px 0;
-}
-
-/* ------- Ideas ------- */
-#ideas .invis-mobile {
-  display: none;
 }
 
 /* -------  Footer ------- */
@@ -145,129 +140,145 @@ footer p {
   padding: 20px;
 }
 
+.grid {
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: column;
+}
+
 /* -------  Media Query ------- */
-@media all and (min-width: 480px) {
-  /* ------- Header ------- */
+@media (min-width: 480px) {
   header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: 0;
+  }
+  .paragraph{
+  align-items: center;
+  margin: auto 0
+}
+.p2{
+  flex: 1;
+  padding-right: 20px;
+  margin: auto 0;
+  
+}
+.picture{
+  flex: 1
+}
+
+form select,
+form input {
+  margin-bottom: 20px;
+  width: 75px;
+}
+
+
+
+.grid{
+  flex-direction:row;
+ 
+}
+.grid div{
+  width:50%
+
+}
+.grid img{
+  width:80%
+}
+  .column img{
+    width: 20%;
+    padding: 5px;
+
+  }
+
+  .last{
+    flex-direction: row;
+    display:flex;
+
+    
+  }
+
+  
+
+  .button{
+    width: 100px
+  }
+
+  .column{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around
+  }
+
+  .container{
+    flex-direction: row;
+    overflow: auto;
+    
+    
+    
   }
 
   .logo {
-    font-size: 30px;
+    margin: 14 px 0 14px 20px;
+    padding-top: 0;
+    font-size: 38px
   }
 
-  header nav ul li {
-    padding: 0 8px;
-  }
-    /* ------- Stay ------- */
-    #stay form {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      padding: 0px 10px;
-    }
-  
-    #stay label {
-      width: 100%;
-    }
-  
-    #stay .select {
-      width: 100%;
-    }
-  
-    #stay button {
-      padding: 10px 20px;
-      font-size: 20px;
-    }
-  
-    #stay div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 10px 5px;
-    }
-      /* ------- About ------- */
-  #about .about-inner-content {
-    text-align: center;
+  header nav ul {
+    align-items: center;
   }
 
-  #about img {
-    width: 250px;
-    padding: 30px;
+  .group {
+    flex-direction: row;
+    align-items: center;
   }
-  @media all and (min-width: 800px) {
-    /* ------- About ------- */
-    #about {
-      padding: 30px;
-    }
-  
-    #about .about-inner-content {
-      display: flex;
-      width: 100%;
-      justify-content: space-evenly;
-      align-items: center;
-      flex-direction: row;
-    }
-  
-    #about p {
-      width: 50%;
-    }
-  
-    #about img {
-      padding: 10px;
-    }
-  
-    /* ------- Ideas ------- */
-  
-    #ideas .ideas-container {
-      display: flex;
-      justify-content: space-between;
-      width: 900px;
-      margin: 40px auto;
-    }
-  
-    #ideas img {
-      width: 350px;
-      padding: 20px;
-    }
-  
-    #ideas .forests {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    #ideas .beaches {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    #ideas .invis-mobile {
-      display: inline-block;
-    }
-  
-    #ideas .rustic-cabins {
-      display: none;
-    }
-  
-    #ideas .pet-friendly {
-      display: none;
-    }
-  
-    /* ------- Host ------- */
-    #host {
-      display: flex;
-      align-items: center;
-    }
-  
-    #host .host-group {
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-    }
-  
-    #host img {
-      width: 50%;
-    }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:row;
+    
   }
+
+  form div {
+    flex-direction: column;
+  }
+
+  
+  
+
+  form select,
+  form input {
+    
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 600px) {
+
+form select,
+form input {
+  margin-bottom: 20px;
+  width: 100px;
+}
+}
+
+@media (min-width: 900px) {
+
+  form select,
+  form input {
+    margin-bottom: 20px;
+    width: 130px;
+  }
+  }
+
+  @media (min-width: 1200px) {
+
+    form select,
+    form input {
+      margin-bottom: 20px;
+      width: 200px;
+    }
+    }
